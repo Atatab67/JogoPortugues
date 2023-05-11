@@ -4,16 +4,16 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const result = document.getElementById('result')
+const newElement = document.getElementById('new')
 let shuffledQuestions, currentQuestionIndex
 var resultPoints = 0
-var numberQuestion = 1
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
 })
-// Arrumar bug da ultima questão nao contar ponto
+// Arrumar bug da ultima questão nao contar ponto e deixar trabalho mais bonito
 function startGame() {
   result.classList.add('hide')
   startButton.classList.add('hide')
@@ -21,6 +21,7 @@ function startGame() {
   currentQuestionIndex = 0
   questionContainerElement.classList.remove('hide')
   setNextQuestion()
+  newElement.classList.add('hide')
 }
 
 function setNextQuestion() {
@@ -90,6 +91,7 @@ function clearStatusClass(element) {
 
 const questions = [
   {
+    //Comparação
     question: 'Em: “… ouviam-se amplos bocejos, fortes como o marulhar das ondas…” a partícula como expressa uma ideia de:',
     answers: [
       { text: 'comparação', correct: true },
@@ -100,27 +102,83 @@ const questions = [
     ]
   },
   {
-    question: 'Perguntas2',
+    //Condicional
+    question: 'Tudo o que quiser,"desde que" estude e passe de ano.',
     answers: [
-      { text: 'A', correct: true },
-      { text: 'B', correct: false },
-      { text: 'C', correct: false },
-      { text: 'D', correct: false }
+      { text: 'Conclusão', correct: false },
+      { text: 'Consformativa', correct: false },
+      { text: 'Condicionais', correct: true },
+      { text: 'Causais', correct: false }
     ]
   },
   {
-    question: 'Pergunta3',
+    //final
+    question: 'É tarde "para que" reverta o estrago.',
     answers: [
-      { text: 'A', correct: false },
-      { text: 'B', correct: true },
-      { text: 'C', correct: false },
+      { text: 'Integrantes', correct: false },
+      { text: 'Finais', correct: true },
+      { text: 'Temporal', correct: false },
+      { text: 'Proporcionais', correct: false}
     ]
   },
   {
-    question: 'Pergunta4',
+    //causal
+    question: 'A casa incendiou "porque" esqueceram o gás ligado.',
     answers: [
-      { text: 'A', correct: false },
-      { text: 'B', correct: true }
+      { text: 'Causais', correct: true },
+      { text: 'Concessivas', correct: false },
+      { text: 'Condicionais', correct: false },
+      { text: 'Conformativas', correct: false }
+    ]
+  },
+  {
+    //Concessiva
+    question: 'Angélica, "posto que" muito emocionada, voltou-se para a rua.',
+    answers: [
+      { text: 'Proporcionais', correct: false },
+      { text: 'Concessivas', correct: true },
+      { text: 'Temporais', correct: false },
+      { text: 'Comparativa', correct: false }
+    ]
+  },  
+  {
+    //Temporal
+    question: 'Desaprovou o comportamento do filho "assim que" soube do ocorrido.',
+    answers: [
+      { text: 'Proporcionais', correct: false },
+      { text: 'Concessivas', correct: false },
+      { text: 'Temporais', correct: true },
+      { text: 'Comparativa', correct: false }
+    ]
+  },  
+  {
+    //Proporcionais
+    question: '"À medida" em que o tempo passava, confortava-se',
+    answers: [
+      { text: 'Proporcionais', correct: true },
+      { text: 'Causais', correct: false },
+      { text: 'Temporais', correct: false },
+      { text: 'Comparativa', correct: false }
+    ]
+  },  
+  {
+    //Integrantes
+    question: 'Não sei "se" você notou que as cortinas são senhoriais.',
+    answers: [
+      { text: 'Proporcionais', correct: false },
+      { text: 'Concessivas', correct: false },
+      { text: 'Temporais', correct: false },
+      { text: 'Integrantes', correct: true }
+    ]
+  },
+  {
+    //Consecutivas
+    question: 'Não sei "se" você notou que as cortinas são senhoriais.',
+    answers: [
+      { text: 'Proporcionais', correct: false },
+      { text: 'Causais', correct: false },
+      { text: 'Consecutivas', correct: true },
+      { text: 'Finais', correct: false }
     ]
   }
 ]

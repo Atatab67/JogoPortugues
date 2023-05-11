@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .navbar {
-    background-color: #18012b;
-    background-image: linear-gradient(to top, #18012b, #210538);
+    background-color: #1b0a44;
+    background-image: linear-gradient(to top, #250a24, #401570 );
     height: 80px;
     display: flex;
     justify-content: center;
@@ -18,11 +18,12 @@
     position: sticky;
     top: 0;
     z-index: 999;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
 }
 
 #navbar_title p {
     background-color: #c5b6d1;
-    background-image: linear-gradient(0.1turn, #5d2abb, #d6bcf8);
+    background-image: linear-gradient(0.1turn, #ffd649, #ffa253);
     background-size: 100%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -43,7 +44,7 @@
 }
 
 body {
-    background-color: #13041f;
+    background-color: #250a24;
     text-align: center
 }
 
@@ -81,7 +82,7 @@ p {
 }
 
 .highlight_text {
-    color: #e73f3f;
+    color: #3f74e7;
 }
 
 .question_text {
@@ -98,7 +99,7 @@ p {
 #btn {
     height: 60px;
     width: 250px;
-    background-color: #3d2480;
+    background-color: #4b2c9e;
     padding: 10px 10px 10px 10px;
     border: 2px solid #180b24;
     border-radius: 10px;
